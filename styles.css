@@ -30,6 +30,11 @@ span {
   cursor: pointer;
 }
 
+span:active {
+  background: #0be881;
+  color: #333;
+}
+
 .calcInput {
   grid-column: span 4;
   height: 100px;
