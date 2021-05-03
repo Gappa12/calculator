@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calc">
+      <input type="text" class="calcInput" />
+      <span class="clear" onclick="clearInput()">C</span>
+      <span onclick="backSpace()"><</span>
+      <span onclick="enterValue('/')">/</span>
+      <span onclick="enterValue('*')">*</span>
+      <span onclick="enterValue('7')">7</span>
+      <span onclick="enterValue('8')">8</span>
+      <span onclick="enterValue('9')">9</span>
+      <span onclick="enterValue('-')">-</span>
+      <span onclick="enterValue('4')">4</span>
+      <span onclick="enterValue('5')">5</span>
+      <span onclick="enterValue('6')">6</span>
+      <span onclick="enterValue('+')" class="plus">+</span>
+      <span onclick="enterValue('1')">1</span>
+      <span onclick="enterValue('2')">2</span>
+      <span onclick="enterValue('3')">3</span>
+      <span onclick="enterValue('0')">0</span>
+      <span onclick="enterValue('00')">00</span>
+      <span onclick="enterValue('.')">.</span>
+      <span onclick="calculateValue()" class="equal">=</span>
+    </div>
+
+    <script type="text/javascript">
+      const calcInput = document.querySelector(".calcInput");
+
+      // document.querySelector(".clear").addEventListener("click", function () {
+      //   calcInput.value = "";
+      //   console.log("click");
+      // });
+
+      function enterValue(num) {
+        calcInput.value += num;
+      }
+
+      function clearInput() {
+        calcInput.value = "";
+      }
+
+      function backSpace() {
+        calcInput.value = calcInput.value.substring(
+          0,
+          calcInput.value.length - 1
+        );
+      }
+
+      function calculateValue() {
+        calcInput.value = eval(calcInput.value);
+      }
+    </script>
+  </body>
+</html>
