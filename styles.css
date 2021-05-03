@@ -19,22 +19,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-span {
-  color: #fff;
-  background: #293949;
-  display: grid;
-  place-items: center;
-  height: 60px;
-  width: 60px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-span:active {
-  background: #0be881;
-  color: #333;
-}
-
 .calcInput {
   grid-column: span 4;
   height: 100px;
@@ -46,15 +30,31 @@ span:active {
   padding: 1rem;
 }
 
-.clear {
+span {
+  color: #fff;
+  background: #293949;
+  display: grid;
+  place-items: center;
+  height: 60px;
+  width: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.calc span:active {
+  background: #0be881;
+  color: #333;
+}
+
+.calc span.magenta {
   background: #ef5777;
 }
 
-.plus {
+.calc span.plus {
   height: 120px;
   grid-row: span 2;
 }
 
-.equal {
+.calc span.equal {
   background: #0be881;
 }
